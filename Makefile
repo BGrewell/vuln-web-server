@@ -3,10 +3,10 @@ CFLAGS = -Wall -O2
 
 # LIB = -lpthread
 
-all: tiny
+all: vuln-web
 
-tiny: tiny.c
-	$(CC) $(CFLAGS) -o tiny tiny.c $(LIB)
+vuln-web: vuln-web.c
+	$(CC) $(CFLAGS) -o vuln-web vuln-web.c $(LIB)
 
 clean:
-	rm -f *.o tiny *~
+	rm -f *.o vuln-web *~
