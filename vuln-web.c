@@ -430,6 +430,12 @@ int main(int argc, char** argv){
 //         }
 //     }
 
+    printf("=============================================================================");
+    printf("[*] WARNING: THIS WEB SERVER HAS SEVERAL SECURITY ISSUES!!!");
+    printf("[*] DO NOT USE FOR ANYTHING OTHER THEN RESEARCH AND EDUCATION");
+    printf("[*] NEVER EXPOSED TO THE INTERNET OR ANY OTHER UNTRUSTED NETWORKS");
+    printf("=============================================================================");
+    
     while(1){
         connfd = accept(listenfd, (SA *)&clientaddr, &clientlen);
         process(connfd, &clientaddr);
