@@ -415,20 +415,20 @@ int main(int argc, char** argv){
     // won't kill the whole process.
     signal(SIGPIPE, SIG_IGN);
 
-    for(int i = 0; i < 10; i++) {
-        int pid = fork();
-        if (pid == 0) {         //  child
-            while(1){
-                connfd = accept(listenfd, (SA *)&clientaddr, &clientlen);
-                process(connfd, &clientaddr);
-                close(connfd);
-            }
-        } else if (pid > 0) {   //  parent
-            printf("child pid is %d\n", pid);
-        } else {
-            perror("fork");
-        }
-    }
+//     for(int i = 0; i < 10; i++) {
+//         int pid = fork();
+//         if (pid == 0) {         //  child
+//             while(1){
+//                 connfd = accept(listenfd, (SA *)&clientaddr, &clientlen);
+//                 process(connfd, &clientaddr);
+//                 close(connfd);
+//             }
+//         } else if (pid > 0) {   //  parent
+//             printf("child pid is %d\n", pid);
+//         } else {
+//             perror("fork");
+//         }
+//     }
 
     while(1){
         connfd = accept(listenfd, (SA *)&clientaddr, &clientlen);
